@@ -29,11 +29,11 @@
         <p class="text-xs text-gray-400 mt-1">Leave empty to keep data forever</p>
       </div>
 
-      <div class="flex justify-between items-center">
-        <%= f.submit "Save Changes", class: "px-3 py-1.5 text-sm border rounded hover:bg-gray-50 cursor-pointer" %>
-
-        <%= button_to "Delete Source", @source, method: :delete, class: "text-sm text-red-600 hover:underline", data: { confirm: "Are you sure? This will delete all messages and events for this source." } %>
-      </div>
+      <%= f.submit "Save Changes", class: "px-3 py-1.5 text-sm border rounded hover:bg-gray-50 cursor-pointer" %>
     <% end %>
+
+    <div class="mt-6 pt-4 border-t">
+      <%= button_to "Delete Source", @source, method: :delete, class: "text-sm text-red-600 hover:underline cursor-pointer", data: { turbo_confirm: "Are you sure? This will delete all messages and events for this source." } %>
+    </div>
   </div>
 <% end %>
